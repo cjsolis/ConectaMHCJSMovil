@@ -1,0 +1,27 @@
+<ion-split-pane>
+  <ion-menu contentId="content">
+    <ion-header>
+      <!-- El mode='md' significa que obliga al estilo a ser tipo Android -->
+      <ion-toolbar color="secondary" mode="md">
+        <ion-title> <img src="../assets/imgs/logo.jpg" alt="logo" class="logo-size"> </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content color="secondary">
+      <ion-list class="list-color">
+        <!-- Acá se genera una iteración de páginas (que son objetos) de la variable pages en menu.page.ts -->
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+          <ion-item [href]="p.url" routerDirection="root" color="mhcjsred2">
+            <!-- Acá se define el ícono y el título en el sidemenu, el [class.active-item]="..." hace un bind de class con active.item si selectedpath === p.url es verdadero -->
+            <ion-icon slot="start" [name]="p.icon" class="color-logo" [class.active-item]="selectedPath === p.url"></ion-icon>
+            <ion-label>
+              {{ p.title }}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet name="menucontent" id="content" main></ion-router-outlet>
+</ion-split-pane>
