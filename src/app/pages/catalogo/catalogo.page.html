@@ -1,15 +1,17 @@
 <ion-header>
   <ion-toolbar color="primary">
+
+    <!-- Botón encargado para abrir el sidemenu -->
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     
-    <!-- Este slot de abajo va a ser utilizado para analizar códigos QR-->
-    <ion-buttons slot="end">
+    <!-- Este slot de abajo va a ser utilizado para analizar códigos QR -->
+    <ion-buttons slot="end" (click)="scanCode()">
       <ion-icon slot="start" name="qr-scanner"></ion-icon>
     </ion-buttons>
 
-    <ion-title>Catalogo</ion-title>
+    <ion-title>Catálogo de Piezas</ion-title> 
   </ion-toolbar>
 </ion-header>
 

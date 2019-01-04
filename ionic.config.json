@@ -1,6 +1,8 @@
 {
   "name": "ConectaMHCJS",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "fc490626"
 }
