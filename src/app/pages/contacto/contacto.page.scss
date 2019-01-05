@@ -1,12 +1,40 @@
 ion-card-header {
-    background-color: darkgrey;
+    background-color: #AC4B5A;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+ion-card-content{
+    background-color: white;
+}
+
+p{
+    text-align: justify;
+    font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+a{
+    text-align: justify;
+    font-size: 16px;
+    color: blue;
+    font-style: normal;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .centrado{
     text-align: center;
-  }
+}
 
-  .tamano {
+.icon-settings{
     font-size: 50px;
-    color: black;
-    }
+    color: white;
+}
