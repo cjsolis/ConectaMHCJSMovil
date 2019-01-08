@@ -16,5 +16,26 @@
 </ion-header>
 
 <ion-content padding color="mhcjsgray">
+  <div>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col *ngFor="let b of maps">
+          <ion-button (click)="selecSlide(b.index)" color="secondary">
+            Piso {{ b.floor }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <ion-slides pager="true" #slidesElem>
+    <ion-slide *ngFor="let m of maps">
+      <ion-buttons (click)="openImage(m.url)">
+        <img [src]="m.url">
+      </ion-buttons>
+    </ion-slide>
+
+  </ion-slides>
+  
 
 </ion-content>

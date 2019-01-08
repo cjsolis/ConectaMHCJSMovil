@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BarcodeScannerOptions, BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-import { ModalController } from '@ionic/angular';
+import { ModalController, IonSlides } from '@ionic/angular';
 import { ElementoqrPage } from '../elementoqr/elementoqr.page';
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
 
 @Component({
   selector: 'app-mapa',
@@ -10,9 +11,26 @@ import { ElementoqrPage } from '../elementoqr/elementoqr.page';
 })
 export class MapaPage implements OnInit {
 
-  scannedData : {};
-  barcodeScannerOptions:BarcodeScannerOptions;
-  constructor(private barcodeScanner: BarcodeScanner, private modalController: ModalController) { }
+  scannedData: {};
+  slideSelected: number;
+  barcodeScannerOptions: BarcodeScannerOptions;
+
+  maps = [ // Variable donde se almacenan los mapas 
+    {
+      floor: 1,
+      index: 0,
+      url: 'https://firebasestorage.googleapis.com/v0/b/conectamhcjs2019.appspot.com/o/floor1.jpg?alt=media&token=cc18720a-a689-4596-a81e-e551c41f0a3d' 
+    },
+    {
+      floor: 2,
+      index: 1,
+      url: 'https://firebasestorage.googleapis.com/v0/b/conectamhcjs2019.appspot.com/o/floor2.jpg?alt=media&token=8ce029ff-7aeb-460f-a542-8948e78d24b7'
+    }
+  ]
+
+
+  @ViewChild('slidesElem') slides;
+  constructor(private barcodeScanner: BarcodeScanner, private modalController: ModalController, private photoViewer:PhotoViewer) { }
 
   ngOnInit() {
   }
@@ -49,6 +67,17 @@ export class MapaPage implements OnInit {
       }
     });
     modal.present();
+  }
+
+  /** Método para abrir una imágen por medio del url. **/
+  openImage(url: string){
+    this.photoViewer.show(url);
+  }
+
+  /** Método para cambiar de slide **/
+  selecSlide(index: number){
+    this.slides.slideTo(index);
+    this.slideSelected = index;
   }
 
 }

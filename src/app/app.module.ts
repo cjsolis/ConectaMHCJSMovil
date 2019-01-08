@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ElementoqrPageModule } from './pages/elementoqr/elementoqr.module';
 import { FormsModule } from '@angular/forms';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx'
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    PhotoViewer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
