@@ -16,5 +16,11 @@
 </ion-header>
 
 <ion-content padding color="mhcjsgray">
-
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 col-md-4 col-xl-3 *ngFor="let img of images">
+        <div class="image-container" [style.background-image]="'url(' + img.url + ')'" (click)="openImage(img.url)"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
