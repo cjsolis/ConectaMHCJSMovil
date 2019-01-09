@@ -15,6 +15,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding color="mhcjsgray">
-
+<ion-content padding color="mhcjsgray" class="card-background-page">
+  <ion-card *ngFor="let e of exhibiciones" (click)="openModalExhElem()">
+      <img [src]="e.imgUrl"/>
+      <div class="card-title">{{ e.nombre }}</div>
+  </ion-card>
 </ion-content>

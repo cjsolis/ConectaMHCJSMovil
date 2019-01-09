@@ -12,12 +12,14 @@ import { ElementoqrPageModule } from './pages/elementoqr/elementoqr.module';
 import { FormsModule } from '@angular/forms';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx'
+import { ElementoexhPageModule } from './pages/elementoexh/elementoexh.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    ElementoqrPageModule, FormsModule
+    ElementoqrPageModule, ElementoexhPageModule, FormsModule, HttpClientModule
   ],
   providers: [
     StatusBar,

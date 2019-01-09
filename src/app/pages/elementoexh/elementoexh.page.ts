@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavParams, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-elementoexh',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElementoexhPage implements OnInit {
 
-  constructor() { }
+  received_data : {}
+  constructor(private navParams: NavParams, private modalController: ModalController) { }
 
   ngOnInit() {
+    this.received_data = this.navParams.get('sent_data');
+  }
+
+  closeModal(){
+    this.modalController.dismiss();
   }
 
 }
