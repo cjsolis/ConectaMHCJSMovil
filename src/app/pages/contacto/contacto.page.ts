@@ -39,7 +39,7 @@ export class ContactoPage implements OnInit {
      });
   }
 
-  /** Método encargado de abrir la siguiente página y de enviar un 
+  /** Método encargado de abrir la página del elemento qr y de enviar un 
    * dato a esta **/
   async openModal() {
     const modal = await this.modalController.create({
@@ -50,5 +50,4 @@ export class ContactoPage implements OnInit {
     });
     modal.present();
   }
-
 }

@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   
-  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },  { path: 'elementoexh', loadChildren: './pages/elementoexh/elementoexh.module#ElementoexhPageModule' }
+  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  //{ path: 'elementoexh', loadChildren: './pages/elementoexh/elementoexh.module#ElementoexhPageModule' }
 
   //{ path: 'elementoqr', loadChildren: './pages/elementoqr/elementoqr.module#ElementoqrPageModule' },
 ];

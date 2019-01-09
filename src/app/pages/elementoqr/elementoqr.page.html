@@ -5,9 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-  <div *ngIf="received_data">
-    <p>Scanned Code Text : <b>{{received_data['text']}}</b></p>
-    <p>Scanned Code Format : <b>{{received_data['format']}}</b></p>
+  <div *ngFor="let data of decoded_data">
+    <img [src]="data.picture.medium">
+    <!-- <p>Scanned Code Text : <b>{{received_data['text']}}</b></p>
+    <p>Scanned Code Format : <b>{{received_data['format']}}</b></p> -->
   </div>
 </ion-content>
 

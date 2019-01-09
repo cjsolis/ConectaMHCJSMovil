@@ -12,6 +12,45 @@ export class EventosPage implements OnInit {
 
   scannedData : {};
   barcodeScannerOptions:BarcodeScannerOptions;
+
+  eventos = [
+    {
+      id: 1,
+      imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Museo_Historico_Juan_Santamaria_-02_cr.jpg/800px-Museo_Historico_Juan_Santamaria_-02_cr.jpg',
+      title: 'Día de San Patricio.',
+      date: '2019-01-27',
+      time: '1:00 pm',
+      description: 'asdf',
+      place: 'Museo Histórico Cultural Juan Santamaría'
+    },
+    {
+      id: 2,
+      imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Museo_Historico_Juan_Santamaria_-02_cr.jpg/800px-Museo_Historico_Juan_Santamaria_-02_cr.jpg',
+      title: 'Día del Trabajador.',
+      date: '2019-01-27',
+      time: '1:00 pm',
+      description: 'asdf',
+      place: 'Museo Histórico Cultural Juan Santamaría'
+    },
+    {
+      id: 3,
+      imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Museo_Historico_Juan_Santamaria_-02_cr.jpg/800px-Museo_Historico_Juan_Santamaria_-02_cr.jpg',
+      title: 'Celebración del 19 aniversario.',
+      date: '2019-01-27',
+      time: '1:00 pm',
+      description: 'asdf',
+      place: 'Museo Histórico Cultural Juan Santamaría'
+    },
+    {
+      id: 4,
+      imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Museo_Historico_Juan_Santamaria_-02_cr.jpg/800px-Museo_Historico_Juan_Santamaria_-02_cr.jpg',
+      title: 'Celebración a la Independencia',
+      date: '2019-01-27',
+      time: '1:00 pm',
+      description: 'asdf',
+      place: 'Museo Histórico Cultural Juan Santamaría'
+    }
+  ]
   constructor(private barcodeScanner: BarcodeScanner, private modalController: ModalController) { }
 
   ngOnInit() {
