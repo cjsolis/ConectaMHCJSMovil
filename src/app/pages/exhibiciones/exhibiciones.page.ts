@@ -72,7 +72,7 @@ export class ExhibicionesPage implements OnInit {
     const modal = await this.modalController.create({
       component: ElementoexhPage,
       componentProps: {
-        sent_data: this.scannedData
+        sent_data: ""
       }
     });
     modal.present();
