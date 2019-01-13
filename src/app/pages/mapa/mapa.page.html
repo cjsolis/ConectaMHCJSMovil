@@ -11,21 +11,24 @@
       <ion-icon slot="start" name="qr-scanner"></ion-icon>
     </ion-buttons>
     
-    <ion-title>Mapa</ion-title>
+    <ion-title>Mapa del Museo</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding color="mhcjsgray">
-  <div>
-    <ion-grid no-padding>
-      <ion-row>
-        <ion-col *ngFor="let b of maps">
-          <ion-button (click)="selecSlide(b.index)" color="secondary">
-            Piso {{ b.floor }}
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<ion-content color="mhcjsgray">
+  <div class="center2">
+      <div class="center">
+
+        <ion-button (click)="selecSlide(0)" color="primary">
+          Piso 1
+        </ion-button>
+
+        <ion-button (click)="selecSlide(1)" color="primary">
+            Piso 2
+        </ion-button>
+
+    </div>
+
   </div>
   
   <ion-slides pager="true" #slidesElem>
