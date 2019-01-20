@@ -28,14 +28,19 @@
         </ion-button>
 
     </div>
-
   </div>
+
+  <br>
   
   <ion-slides pager="true" #slidesElem>
     <ion-slide *ngFor="let m of maps">
-      <ion-buttons (click)="openImage(m.url)">
-        <img [src]="m.url">
-      </ion-buttons>
+      <div class="center2">
+        <div class="center3">
+          <ion-buttons (click)="openImage(m.url)">
+            <img [src]="m.url">
+          </ion-buttons>
+        </div>
+      </div>
     </ion-slide>
 
   </ion-slides>

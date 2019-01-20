@@ -19,12 +19,12 @@ export class MapaPage implements OnInit {
     {
       floor: 1,
       index: 0,
-      url: 'https://firebasestorage.googleapis.com/v0/b/conectamhcjs2019.appspot.com/o/floor1.jpg?alt=media&token=cc18720a-a689-4596-a81e-e551c41f0a3d' 
+      url: 'https://firebasestorage.googleapis.com/v0/b/conectamhcjs2019.appspot.com/o/Piso%201.jpg?alt=media&token=1a000161-8ee1-4e55-b4ad-3c28218eba24' 
     },
     {
       floor: 2,
       index: 1,
-      url: 'https://firebasestorage.googleapis.com/v0/b/conectamhcjs2019.appspot.com/o/floor2.jpg?alt=media&token=8ce029ff-7aeb-460f-a542-8948e78d24b7'
+      url: 'https://firebasestorage.googleapis.com/v0/b/conectamhcjs2019.appspot.com/o/Piso%202.jpg?alt=media&token=fe5326ea-e64f-4bfe-967a-245321b07d1c'
     }
   ]
 

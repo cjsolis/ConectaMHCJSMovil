@@ -11,13 +11,17 @@ export class ElementoqrPage implements OnInit {
 
   received_data: {};
   decoded_data = [];
-  received_data2: {};
+  decoded_data2: any;
+  url = '';
 
   constructor(private navParams: NavParams, private modalController: ModalController, private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.received_data = this.navParams.get('sent_data');
-    this.getHttpElement(this.received_data['text']);
+    console.log('Elemento recibido de el lector QR', this.received_data);
+    this.url = 'https://conectamhcjs.herokuapp.com' + this.received_data['text'];
+    console.log('Url completa: ', this.url);
+    this.getHttpElement(this.url);
   }
 
   closeModal(){
@@ -27,11 +31,9 @@ export class ElementoqrPage implements OnInit {
   getHttpElement(elem: string){
     this.httpClient.get(elem)
     .subscribe(res => {
-      console.log(res);
-      console.log(res['results']);
-      this.decoded_data = this.decoded_data.concat(res['results']);
-      console.log(this.decoded_data);
-      console.log(this.decoded_data[0].name.first);
+      console.log('Elemento conseguido de la lecutra del HTtP', res);
+      this.decoded_data2 = res;
+
     })
   }
 
