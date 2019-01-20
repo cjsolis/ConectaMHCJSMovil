@@ -10,6 +10,7 @@
 
 // Modifica el tamaño y la posición de el logo del museo.
 .logo-size{
+    display: block;
     margin-left: auto;
     margin-right: auto;
     height: 50%;
@@ -19,5 +20,14 @@
 // Modifica el color de fondo de los elementos dentro del sidemenu
 .list-color{
     background-color: #4f1c27;
+}
+
+.center3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 50%;
+
 }
 
